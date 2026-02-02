@@ -3,47 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <title>SkyCast | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="body-bg">
-<div class="app-container">
-    <div class="search-section">
-        <div class="search-bar">
-            <input type="text" id="city" placeholder="Search city..." autocomplete="off">
-            <button onclick="getWeather()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-        </div>
-    </div>
+<body>
+    <div class="container">
+        <header class="search-section">
+            <div class="search-input-wrapper">
+                <input type="text" id="city" placeholder="Search city..." autocomplete="off">
+                <button onclick="getWeather()" class="search-trigger">Search</button>
+            </div>
+        </header>
 
-    <div class="weather-card" id="weather-card">
-        <div class="card-header">
-            <h2 id="location">--</h2>
-            <p id="date">Monday, 12 June</p>
-        </div>
-        
-        <div class="main-display">
-            <div class="temp-wrapper">
-                <h1 id="temp">--°</h1>
-                <p id="desc">--</p>
+        <main class="dashboard-grid" id="weather-card">
+            <div class="bento-card hero">
+                <div class="hero-info">
+                    <h2 id="location">--</h2>
+                    <p id="date">--</p>
+                    <div class="temp-group">
+                        <h1 id="temp">--°</h1>
+                        <span id="desc">--</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img id="icon" src="" alt="">
+                </div>
             </div>
-            <img id="icon" src="" alt="">
-        </div>
 
-        <div class="stats-bar">
-            <div class="stat-item">
-                <span class="stat-label">Humidity</span>
-                <span class="stat-value" id="humidity">--%</span>
+            <div class="bento-card stat">
+                <label>Humidity</label>
+                <div class="stat-content">
+                    <p id="humidity">--%</p>
+                </div>
             </div>
-            <div class="stat-item">
-                <span class="stat-label">Feels Like</span>
-                <span class="stat-value" id="feels-like">--°</span>
+
+            <div class="bento-card stat">
+                <label>Feels Like</label>
+                <div class="stat-content">
+                    <p id="feels-like">--°</p>
+                </div>
             </div>
-        </div>
+
+            <div class="bento-card stat full-width">
+                <label>Wind Speed</label>
+                <div class="stat-content">
+                    <p id="wind">-- km/h</p>
+                </div>
+            </div>
+        </main>
     </div>
-</div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
