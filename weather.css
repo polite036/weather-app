@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    transition: background 1s ease; /* Smooth color transition */
+    transition: background 1s ease; 
 }
 
 .app-container {
@@ -21,7 +21,6 @@ body {
     max-width: 400px;
 }
 
-/* Slick Search Bar */
 .search-bar {
     display: flex;
     background: rgba(0, 0, 0, 0.2);
@@ -54,7 +53,6 @@ body {
 
 .search-bar button:hover { transform: scale(1.1); }
 
-/* Glassmorphism Card */
 .weather-card {
     background: var(--card-glass);
     backdrop-filter: blur(15px);
@@ -87,7 +85,6 @@ body {
 
 #icon { width: 120px; filter: drop-shadow(0 0 20px rgba(255,255,255,0.3)); }
 
-/* Stats Row */
 .stats-bar {
     display: flex;
     justify-content: space-between;
