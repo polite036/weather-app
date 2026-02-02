@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+<div class="app">
+    <div class="search-box">
+        <input type="text" id="city" placeholder="Search city..." spellcheck="false">
+        <button onclick="getWeather()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+    </div>
+
+    <div class="weather-card" id="weather-card">
+        <h2 id="location">--</h2>
+        
+        <div class="weather-main">
+            <img id="icon" src="" alt="">
+            <h1 id="temp">--°</h1>
+        </div>
+        
+        <p id="desc">--</p>
+
+        <div class="humidity-section">
+            <span class="label">Humidity</span>
+            <p id="humidity">--%</p>
+        </div>
+    </div>
+</div>
+<script src="weather.js"></script>
+</body>
+</html>
